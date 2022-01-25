@@ -50,7 +50,7 @@ def predict():
     # features = [[int(x) for x in request.form.values()]]
     
     scale_features = scaler.transform(features)
-    output = price_model.predict(scale_features)[0]
+    output = round(price_model.predict(scale_features)[0],2)
     print(output)
     
     return render_template('Prediction.html', prediction_text='Your house is worth: ${}'.format(output))
