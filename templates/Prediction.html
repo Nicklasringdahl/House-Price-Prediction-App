@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+	Solitude by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>House Price Prediction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="../static/style.css" rel="stylesheet" />
+    <link href="../static/elusive-webfont.css" rel="stylesheet" />
+    <link href="../static/animate.css" rel="stylesheet" />
+
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="../static/jquery.min.js"></script>
+    <script src="../static/modernizr.custom.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-target="#navbar-main">
+    <div id="navbar-main">
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-collapse"
+            >
+              <i class="el-icon-lines"></i>
+            </button>
+            <a class="navbar-brand hidden-xs hidden-sm" href="#home"
+              ><h1>Property Predictions</h1></a
+            >
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <a
+                  href="{{url_for('home',_anchor='home')}}"
+                  class="smoothScroll"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{{url_for('home',_anchor='about')}}"
+                  class="smoothScroll"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{{url_for('home',_anchor='portfolio')}}"
+                  class="smoothScroll"
+                  >Apps</a
+                >
+              </li>
+              <li><a href="#contact" class="smoothScroll">Contact</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== SECTION DIVIDER4 ==== -->
+    <section class="greywrap">
+      <div class="container">
+        <h1 class="fade-down">Predict the Price of Your House</h1>
+        <hr />
+        <p class="fade-up">
+          Fill in the below information to find out how much your house is worth
+        </p>
+      </div>
+      <!-- container -->
+    </section>
+    <!-- section -->
+    <div>
+      <form form action="{{ url_for('predict')}}" method="post" class="centered">
+
+        <label for="type">Type:</label><br />
+        <select id="type" name="type">
+          <option value="h">House</option>
+          <option value="t">Townhouse</option>
+          <option value="u">Unit</option>
+        </select><br /><br />
+
+        <label for="bathroom">Bathrooms:</label><br />
+        <input type="text" id="Bathrooms" name="Bathrooms" /><br /><br />
+
+        <label for="bedroom">Bedrooms:</label><br />
+        <input type="text" id="Bedrooms" name="Bedrooms" /><br /><br />
+
+        <label for="cspots">Car spots:</label><br />
+        <input type="text" id="cspots" name="cspots" /><br /><br />
+
+        <label for="area">Land size (m<sup>2</sup>):</label><br />
+        <input type="text" id="area" name="area" /><br /><br />
+
+
+        <label for="region">Region:</label><br />
+        <select id="region" name="region">
+          <option name ="Northern Metropolitan" >Northern Metropolitan</option>
+          <option name ="Western Metropolitan" >Western Metropolitan</option>
+          <option name ="Southern Metropolitan" >Southern Metropolitan</option>
+          <option name ="Eastern Metropolitan" >Eastern Metropolitan</option>
+          <option name ="South-Eastern Metropolitan" >South-Eastern Metropolitan</option>
+          <option name ="Eastern Victoria" >Eastern Victoria</option>
+          <option name ="Northern Victoria" >Northern Victoria</option>
+          <option name ="Western Victoria" >Western Victoria</option>
+        </select><br /><br />
+        <input type="submit" >
+      </form>
+    </div>
+
+<div class = "centered">{{prediction_text}}</div>
+
+    <!-- ==== SECTION DIVIDER6 ==== -->
+    <section class="section-divider textdivider divider6">
+      <div class="container">
+        <h1 class="fade-down">Thank you for Visiting</h1>
+        <hr />
+      </div>
+      <!-- container -->
+    </section>
+    <!-- section -->
+
+    <div class="container" id="contact" name="contact">
+      <div class="row row white">
+        <br />
+        <h1 class="centered fade-down">Further contact</h1>
+        <hr class="fade-down title-mb" />
+        <div class="centered col-md-12 fade-up">
+          <h3>Contact Information</h3>
+          <p>
+            <span class="icon icon-envelop"></span>
+            <a href="mailto: Nicklas.ringdahl@gmail.com">Email</a>
+            <br />
+            <span class="icon icon-twitter"></span>
+            <a href="https://www.linkedin.com/in/nicklas-ringdahl/">Linkedin</a>
+            <br />
+            <span class="icon icon-facebook"></span>
+            <a href="https://github.com/Nicklasringdahl">Github</a> <br />
+          </p>
+        </div>
+        <!-- col -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/plugins.js"></script>
+    <script type="text/javascript" src="../js/init.js"></script>
+  </body>
+</html>

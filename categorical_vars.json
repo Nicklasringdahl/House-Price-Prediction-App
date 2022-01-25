@@ -1,0 +1,13 @@
+{
+  "Type": { "0": "h", "1": "t", "2": "u" },
+  "Regionname": {
+    "0": "Eastern Metropolitan",
+    "1": "Eastern Victoria",
+    "2": "Northern Metropolitan",
+    "3": "Northern Victoria",
+    "4": "South-Eastern Metropolitan",
+    "5": "Southern Metropolitan",
+    "6": "Western Metropolitan",
+    "7": "Western Victoria"
+  }
+}
