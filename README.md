@@ -28,7 +28,9 @@ Created an application that contains both a tool for predicting house prices usi
 ## Authors
 
 Nicklas Ringdahl
+
 [LinkedIn](www.linkedin.com/in/nicklas-ringdahl)
+
 [Github](https://github.com/Nicklasringdahl)
 
 
