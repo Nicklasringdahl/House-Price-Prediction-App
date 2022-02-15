@@ -4,7 +4,7 @@ Using machine learning to predict house prices.
 
 ## Description
 
-Created an application that contains both a tool for predicting house prices using machine learning as well as an interactive map for visualising historical price data.
+An application that contains both a tool for predicting house prices using machine learning as well as an interactive map for visualising historical price data.
 
 ## Getting Started
 
