@@ -7,11 +7,9 @@ import joblib
 
 
 
-
-
 app = Flask(__name__)
 price_model = pickle.load(open('regressor.pkl','rb'))
-scaler = pickle.load(open('scaler.pkl','rb'))
+scaler = pickle.load(open('C:\Users\Nick\Documents\School\Homework\House-Price-Prediction-App\scaler.pkl','rb'))
 
 
 @app.route('/')
@@ -25,6 +23,10 @@ def prediction():
 @app.route('/map')
 def map():
     return render_template('Map.html')
+
+@app.route('/Analysis')
+def prediction():
+    return render_template('Analysis.html')    
 
 @app.route('/prediction',methods=['POST'])
 def predict():

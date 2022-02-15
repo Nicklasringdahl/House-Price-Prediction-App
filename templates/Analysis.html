@@ -26,11 +26,7 @@
     <script src="../static/modernizr.custom.js" type="text/javascript"></script>
     <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+
   </head>
 
   <body data-target="#navbar-main">
@@ -48,7 +44,7 @@
               <i class="el-icon-lines"></i>
             </button>
             <a class="navbar-brand hidden-xs hidden-sm" href="#home"
-              ><h1>Property Predictions</h1></a
+              ><h1>Property Analysis</h1></a
             >
           </div>
           <div class="navbar-collapse collapse">
@@ -94,46 +90,7 @@
       <!-- container -->
     </section>
     <!-- section -->
-    <div>
-      <form form action="{{ url_for('predict')}}" method="post" class="centered">
-
-        <label for="type">Type:</label><br />
-        <select id="type" name="type">
-          <option value="h">House</option>
-          <option value="t">Townhouse</option>
-          <option value="u">Unit</option>
-        </select><br /><br />
-
-        <label for="bathroom">Bathrooms:</label><br />
-        <input type="text" id="Bathrooms" name="Bathrooms" /><br /><br />
-
-        <label for="bedroom">Bedrooms:</label><br />
-        <input type="text" id="Bedrooms" name="Bedrooms" /><br /><br />
-
-        <label for="cspots">Car spots:</label><br />
-        <input type="text" id="cspots" name="cspots" /><br /><br />
-
-        <label for="area">Land size (m<sup>2</sup>):</label><br />
-        <input type="text" id="area" name="area" /><br /><br />
-
-
-        <label for="region">Region:</label><br />
-        <select id="region" name="region">
-          <option name ="Northern Metropolitan" >Northern Metropolitan</option>
-          <option name ="Western Metropolitan" >Western Metropolitan</option>
-          <option name ="Southern Metropolitan" >Southern Metropolitan</option>
-          <option name ="Eastern Metropolitan" >Eastern Metropolitan</option>
-          <option name ="South-Eastern Metropolitan" >South-Eastern Metropolitan</option>
-          <option name ="Eastern Victoria" >Eastern Victoria</option>
-          <option name ="Northern Victoria" >Northern Victoria</option>
-          <option name ="Western Victoria" >Western Victoria</option>
-        </select><br /><br />
-        <input type="submit" >
-      </form>
-    </div><br />
-
-<div class = "centered " style="font-size:25px"><b>{{prediction_text}}</b></div>
-
+    
     <!-- ==== SECTION DIVIDER6 ==== -->
     <section class="section-divider textdivider divider6">
       <div class="container">
@@ -166,9 +123,7 @@
 
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/plugins.js"></script>
     <script type="text/javascript" src="../js/init.js"></script>
