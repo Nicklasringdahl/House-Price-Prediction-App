@@ -25,7 +25,7 @@ def map():
     return render_template('Map.html')
 
 @app.route('/Analysis')
-def prediction():
+def analysis():
     return render_template('Analysis.html')    
 
 @app.route('/prediction',methods=['POST'])
