@@ -24,7 +24,7 @@ def prediction():
 def map():
     return render_template('Map.html')
 
-@app.route('/Analysis')
+@app.route('/analysis')
 def analysis():
     return render_template('Analysis.html')    
 
